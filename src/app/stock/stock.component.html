@@ -1,0 +1,22 @@
+<div class="container-fluid">
+  <div class="row">
+    <div class="card col-3 mb-2 mt-2"  *ngFor="let p of stock">
+      <img src="{{p.image}}" class="card-img-top" alt="...">
+      <div class="card-body">
+        <h5 class="card-title">{{p.name}}</h5>
+        <p class="card-text">{{p.description}}</p>
+      </div>
+      <ul class="list-group list-group-flush">
+        <li class="list-group-item">ID: {{p.id}}</li>
+        <li class="list-group-item">Price: {{p.price}}€</li>
+        <li class="list-group-item">Quantity: {{p.quantity}}</li>
+      </ul>
+      <input type="number" min = "0" max = "{{p.quantity}}" name="" id="" class="mb-2 mt-2">
+      <a href="#" class="btn btn-primary mb-2 mt-2" *ngIf="p.quantity !== 0" (click)= modify(p)>Modify stock</a>
+      <a href="#" class="btn btn-primary mb-2 mt-2 disabled" *ngIf="p.quantity === 0" (click)= modify(p)>Modify stock</a>
+      <!--      <a href="#" class="btn btn-primary mb-2 mt-2" [ngClass]="{'disabled': p.quantity === 0 }" (click)= modify(p)>Modify stock</a>-->
+
+    </div>
+  </div>
+</div>
+
