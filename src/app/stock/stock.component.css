@@ -1,0 +1,9 @@
+.filter-container {
+    display: flex;
+    justify-content: left;
+    padding: 5px;
+}
+
+.filter-container > div {
+    padding: 2px
+}

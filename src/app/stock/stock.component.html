@@ -1,13 +1,25 @@
 <div class="container-fluid">
 
-  <div>
+  <div class="filter-container">
     
-    <input type="checkbox" [(ngModel)]="onlyAvailable" id="filter-available">
-    <label for="filter-available">filtrer disponible</label>
+
+    <div>
+      <input type="number" min="0" placeholder="min" [(ngModel)]="min">
+    </div>
+    
+    <div>
+      <input type="number" min="0" placeholder="max" [(ngModel)]="max">
+    </div>
+    
+    <div>
+      <input type="checkbox" [(ngModel)]="onlyAvailable" id="filter-available">
+      <label for="filter-available">filtrer disponible</label>
+    </div>
+    
   </div>
 
   <div class="row">
-    <div class="card col-3 mb-2 mt-2"  *ngFor="let p of stock | available:onlyAvailable; let i = index">
+    <div class="card col-3 mb-2 mt-2"  *ngFor="let p of stock | available:onlyAvailable | priceFilter:min:(max==0?undefined:max); let i = index">
       <img src="{{p.image}}" class="card-img-top" alt="...">
       <div class="card-body">
         <h5 class="card-title">{{p.name}}</h5>

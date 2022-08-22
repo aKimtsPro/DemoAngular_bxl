@@ -10,6 +10,8 @@ import {Iproduit} from "./iproduit";
 export class StockComponent implements OnInit {
 
   onlyAvailable: boolean = false;
+  min?: number;
+  max?: number;
   stock: Iproduit[] = [
     {
       id: 1,
