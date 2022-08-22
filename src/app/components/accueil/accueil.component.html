@@ -10,6 +10,6 @@
 
 <div>
     <input type="number" [(ngModel)]="aVerifier">
-    <button (click)="verifyParity()">verifier</button>
+    <button (click)="verifyParity()"> <!-- [routerLink]="'/parite/'+aVerifier" --> verifier</button>
     <p *ngIf="wrongNumber">le nombre indiqué est invalide</p>
 </div>
