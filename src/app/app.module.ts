@@ -11,6 +11,8 @@ import { PriceFilterPipe } from './pipes/price-filter.pipe';
 import { AppRoutingModule } from './app-routing.module';
 import { AccueilComponent } from './components/accueil/accueil.component';
 import { PariteComponent } from './components/parite/parite.component';
+import { ContactComponent } from './components/contact/contact.component';
+import { ProduitComponent } from './components/produit/produit.component';
 
 @NgModule({
   declarations: [
@@ -20,7 +22,9 @@ import { PariteComponent } from './components/parite/parite.component';
     AvailablePipe,
     PriceFilterPipe,
     AccueilComponent,
-    PariteComponent
+    PariteComponent,
+    ContactComponent,
+    ProduitComponent
   ],
   imports: [
     BrowserModule,

@@ -1,0 +1,28 @@
+
+
+
+<div class="card col-3 mb-2 mt-2" *ngIf="selectedProduct; else noProduct">
+
+    <img src="{{selectedProduct.image}}" class="card-img-top" alt="...">
+    <div class="card-body">
+      <h5 class="card-title">{{selectedProduct.name}}</h5>
+      <p class="card-text">{{selectedProduct.description}}</p>
+    </div>
+    <ul class="list-group list-group-flush">
+      <li class="list-group-item">ID: {{selectedProduct.id}}</li>
+      <li class="list-group-item">Price: {{ selectedProduct.price | currency:'EUR':'symbol' }}</li>
+      <li class="list-group-item">Quantity: {{selectedProduct.quantity}}</li>
+    </ul>
+
+</div>
+
+  
+<ng-template #noProduct>
+
+    <div>
+        <p>Le produit recherché n'existe pas</p>
+    </div>
+
+    <button routerLink="/stock">retour à la liste</button>
+
+</ng-template>
