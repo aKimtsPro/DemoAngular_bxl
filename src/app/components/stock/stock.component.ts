@@ -62,7 +62,7 @@ export class StockComponent implements OnInit {
   }
 
   modify(p: Iproduit) {
-    p.quantity--;
-
+    if(p.quantity > 0)
+      p.quantity--;
   }
 }
