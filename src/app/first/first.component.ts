@@ -12,6 +12,7 @@ export class FirstComponent implements OnInit {
 
   private _randomTest:number = Math.floor(Math.random() * 1026)
   randomTestBaba = Math.floor(Math.random() * 1026) // Type Var, il va déduire le type de la variable
+  currentDate: Date = new Date();
 
 
 

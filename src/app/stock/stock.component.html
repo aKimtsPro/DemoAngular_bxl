@@ -1,6 +1,13 @@
 <div class="container-fluid">
+
+  <div>
+    
+    <input type="checkbox" [(ngModel)]="onlyAvailable" id="filter-available">
+    <label for="filter-available">filtrer disponible</label>
+  </div>
+
   <div class="row">
-    <div class="card col-3 mb-2 mt-2"  *ngFor="let p of stock">
+    <div class="card col-3 mb-2 mt-2"  *ngFor="let p of stock | available:onlyAvailable; let i = index">
       <img src="{{p.image}}" class="card-img-top" alt="...">
       <div class="card-body">
         <h5 class="card-title">{{p.name}}</h5>
@@ -8,7 +15,7 @@
       </div>
       <ul class="list-group list-group-flush">
         <li class="list-group-item">ID: {{p.id}}</li>
-        <li class="list-group-item">Price: {{p.price}}€</li>
+        <li class="list-group-item">Price: {{ p.price | currency:'EUR':'symbol' }}</li>
         <li class="list-group-item">Quantity: {{p.quantity}}</li>
       </ul>
       <input type="number" min = "0" max = "{{p.quantity}}" name="" id="" class="mb-2 mt-2">

@@ -1,9 +1,9 @@
 <div class="card" style="width: 18rem;">
   <img [src]="pathImage" class="card-img-top" alt="...">
   <div class="card-body">
-    <h5 class="card-title" [ngClass]="{'rouge': randomTest % 2 === 0, 'bleu': randomTest %2 !== 0}">{{dataCards.title}}</h5>
+    <h5 class="card-title" [ngClass]="{'rouge': randomTest % 2 === 0, 'bleu': randomTest %2 !== 0}">{{dataCards.title}} : {{ currentDate | date:'dd/MM/yyyy' }}</h5>
     <p class="card-text"[ngStyle]="{'font-style': randomTest %2 ? 'normal' : 'italic'}" >{{dataCards.description}}</p>
-    <a href="#" class="btn btn-primary" (click)= showAlert()>More info</a>
+    <a href="#" class="btn btn-primary" (click)=showAlert()>More info</a>
     <input type="number" name="" id="" [(ngModel)]="randomTest" class="form-control mt-md-2 mb-2">
     <div class="alert alert-info" *ngIf="randomTest%2 === 0">
       Ne s'affiche que quand le number est pair

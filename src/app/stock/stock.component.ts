@@ -3,11 +3,13 @@ import {Iproduit} from "./iproduit";
 
 @Component({
   selector: 'app-stock',
+  // template: '<h1>salut</h1>',
   templateUrl: './stock.component.html',
   styleUrls: ['./stock.component.css']
 })
 export class StockComponent implements OnInit {
 
+  onlyAvailable: boolean = false;
   stock: Iproduit[] = [
     {
       id: 1,
@@ -15,14 +17,14 @@ export class StockComponent implements OnInit {
       description: "C'est une boisson alcoolisée à base de coca, de noix de kola et de damiana, Pemberton se serait inspiré de la recette du vin Mariani, un mélange de vin de ...",
       image: "https://africalicious.be/wp-content/uploads/2020/12/Coca-e1608292123533.jpg",
       price: 2,
-      quantity: 3
+      quantity: 0
     },
     {
       id: 2,
       name: "Fanta 33cl",
       description: "Bright, bubbly and popular, Fanta is the soft drink that intensifies fun. Introduced in 1940, Fanta is the second oldest brand of The Coca-Cola Company. Bright, ...",
       image: "https://cdn.shopify.com/s/files/1/0020/9417/0167/products/fanta-grape-049000014242-31792001548451_660x.jpg?v=1660374201",
-      price: 2,
+      price: 3,
       quantity: 3
     },
     {
@@ -30,7 +32,7 @@ export class StockComponent implements OnInit {
       name: "Sprite 33cl",
       description: "Crisp, refreshing and clean-tasting, Sprite is a lemon and lime-flavoured soft drink. It first hit shop shelves back in 1961 and today it's sold in more than ...",
       image: "https://www.saudasulf.com/wp-content/uploads/2022/01/12628509-0-M.jpg",
-      price: 2,
+      price: 4,
       quantity: 3
     },
     {
@@ -38,7 +40,7 @@ export class StockComponent implements OnInit {
       name: "Ice-tea 33cl",
       description: "Iced tea is a form of cold tea. It may or may not be sweetened and is also a popular packaged drink. It can be mixed with flavored syrup with multiple ...",
       image: "https://www.menu-touch.fr/resto/media/7118/2a5bb805c9ceb12f6a29042bea615720.jpg",
-      price: 2,
+      price: 5,
       quantity: 3
     },
     {
@@ -46,7 +48,7 @@ export class StockComponent implements OnInit {
       name: "Red-bull 33cl",
       description: "Red Bull est une boisson énergisante qui vous donne des ailes quel que soit le moment où vous en avez besoin.",
       image: "https://www.thuisdrinken.nl/crop/660x660/products/5299/5299_40",
-      price: 2,
+      price: 6,
       quantity: 3
     }
     ]
