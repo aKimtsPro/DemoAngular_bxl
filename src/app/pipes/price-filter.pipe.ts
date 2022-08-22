@@ -1,5 +1,5 @@
 import { Pipe, PipeTransform } from '@angular/core';
-import { Iproduit } from '../stock/iproduit';
+import { Iproduit } from '../components/stock/iproduit';
 
 @Pipe({
   name: 'priceFilter',

@@ -1,0 +1,15 @@
+<h1>Bonjour sur mon site de démo</h1>
+
+<p>
+    Lorem ipsum dolor sit amet consectetur adipisicing elit. Atque laudantium et quod tenetur beatae, sunt veniam quo officiis nisi nesciunt est, rem ab, odio fugiat consectetur consequuntur cum dolorum corporis! Officia voluptatum reiciendis, est, pariatur cumque commodi, repudiandae quasi enim culpa voluptatibus eos corporis perspiciatis nostrum dolores omnis doloribus similique?
+</p>
+
+<p>
+    Choisissez un nombre pour voir s'il est pair ou non.
+</p>
+
+<div>
+    <input type="number" [(ngModel)]="aVerifier">
+    <button (click)="verifyParity()">verifier</button>
+    <p *ngIf="wrongNumber">le nombre indiqué est invalide</p>
+</div>

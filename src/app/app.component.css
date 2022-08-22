@@ -1,0 +1,13 @@
+.spacer {
+    display: flex;
+    justify-content: left;
+}
+
+.spacer a {
+    color: black;
+    padding-left: 20px;
+}
+
+.active {
+    color: goldenrod !important;
+}
